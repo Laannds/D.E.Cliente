@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Control de notas</title>
+    <script>
+
+            let num = 0 ; 
+            
+            var numeroAdivinar = Math.ceil(Math.random()*100+1);
+            var numeroGenerado = numeroAdivinar ;
+            let cont = 1 ;
+
+            while(numeroAdivinar != num )
+            {
+            alert(numeroGenerado);
+            let num = Number(prompt ("Indroduce un numero"));
+            //alert(num);
+        
+
+            if(num == numeroAdivinar)
+            {
+                alert("Correcto , con un nº de intentos -> "+cont);
+                cont = cont + 1 ; 
+            }
+
+            if(num != numeroAdivinar && num > numeroAdivinar )
+            {
+                alert("Incorrecto introduce otro numero -> "+cont +"  El numero es menor"); 
+                cont = cont + 1 ; 
+            
+            }
+
+            if(num != numeroAdivinar && num < numeroAdivinar )
+            {
+                 alert("Incorrecto introduce otro numero -> "+cont +"  El numero es mayor"); 
+                 cont = cont + 1 ; 
+
+            }
+            }
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

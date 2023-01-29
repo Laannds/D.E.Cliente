@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- pagina1.html -->
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+    </head>
+
+    <body>
+        <script>
+                let valorNumero = prompt(" Introduce tu DNI ");
+
+                if(valorNumero.includes('-'))
+                {
+                   valorNumero = valorNumero.split('-');
+                }
+
+                let letra= valorNumero.slice(valorNumero.length-1, valorNumero.length);
+                valorNumero = valorNumero.slice(0,valorNumero.length-1);
+                console.log(valorNumero);
+                
+
+
+                function comprobar(valorNumero)
+                {
+                    let cadena = "TRWAGMYFPDXBNJZSQHLCKE";
+                    let division = valorNumero % 23; 
+
+                    console.log(division);
+                    console.log(letra);
+
+                    if(cadena.charAt(division)==letra)
+                    {
+                        alert("Correcto");
+                        console.log("Correcto");
+                    }
+                    else
+                    {
+                        alert("Inorrecto");
+                        console.log("Inorrecto");
+                    }
+                    
+                }
+
+                comprobar(valorNumero);
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cadenas</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <div id="texto"></div>
+    <script>    
+        var daw ="Desarrollo de Aplicaciones web" ; 
+        var dam ="Desarrollo de Aplicaciones Multiplataforma" ; 
+        var asir = "Administracón de 'Sistemas Informáticos' en red" ;
+        var smr = "Sistemas \"Microinformáticos\" y redes" ;
+        
+        // Declaración de cadena en blanco : 
+        var ciclo = new String("");  
+
+        ciclo += "Hay tres ciclos de grado superior \n " ;
+        ciclo += dam+" , "+daw+" , "+asir+" , "+smr ;
+
+        alert(ciclo);
+        alert("La longitud de la cadena es : "+ciclo.length );
+        alert(ciclo.concat("Adioses"));
+        if(ciclo.includes("Desarrollo")) alert("CONTENIDO DESARROLLO");
+        var texto = document.getElementById("texto");
+        texto.innerHTML = ciclo ; 
+
+    </script>
+</body>
+</html>

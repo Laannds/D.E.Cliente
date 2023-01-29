@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="calculadora"> </p>
+    <p id="calculadora2"> </p>
+    <p id="calculadora3"> </p>
+    <p id="calculadora4"> </p>
+    <script>
+        let numero1 = Number(prompt("Introduce el 1er número"));
+
+        if(isNaN(numero1))
+        {
+            numero1 = Number(prompt("Introduce un número correcto "));
+        }
+
+
+        let numero2 = Number(prompt("Introduce el 2do número"));
+
+        if(isNaN(numero2))
+        {
+            numero1 = Number(prompt("Introduce un número correcto "));
+        }
+
+        function suma(numero1 , numero2)
+        {
+            window.alert(parseInt(numero1)+parseInt(numero2));
+            document.getElementById("calculadora").innerHTML = ("Suma"+(parseInt(numero1)+parseInt(numero2))) ; 
+        }
+
+        function resta(numero1 , numero2)
+        {
+            window.alert(parseInt(numero1)-parseInt(numero2));
+            document.getElementById("calculadora2").innerHTML = ("Resta"+(parseInt(numero1)-parseInt(numero2))) ; 
+        }
+
+        function producto(numero1 , numero2)
+        {
+            window.alert(parseInt(numero1)*parseInt(numero2));
+            document.getElementById("calculadora3").innerHTML = ("Multiplicacion"+(parseInt(numero1)/parseInt(numero2))) ; 
+        }
+
+        function div(numero1 , numero2)
+        {
+            window.alert(parseInt(numero1)/parseInt(numero2));
+            document.getElementById("calculadora4").innerHTML = ("Div "+(parseInt(numero1)*parseInt(numero2))) ; 
+        }
+
+
+        suma(numero1,numero2);
+        resta(numero1,numero2);
+        producto(numero1,numero2);
+        div(numero1,numero2);
+
+
+    </script>
+</body>
+</html>

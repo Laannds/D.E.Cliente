@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio1 Clase Repaso</title>
+</head>
+<body>
+
+    <script>
+        let listado = [
+            {
+             "Nombre" : "Pablo",
+             "Asignatura" : "Acceso a Datos",
+             "Nota" : "8"
+            },
+
+            {
+             "Nombre" : "Diego",
+             "Asignatura" : "Acceso a Datos",
+             "Nota" : "5"
+            },
+
+
+            {
+             "Nombre" : "Alex",
+             "Asignatura" : "Acceso a Datos",
+             "Nota" : "6"
+            },
+
+
+            {
+             "Nombre" : "Juan",
+             "Asignatura" : "Acceso a Datos",
+             "Nota" : "7"
+            },
+
+            {
+             "Nombre" : "Paco",
+             "Asignatura" : "Acceso a Datos",
+             "Nota" : "3"
+            },
+            {
+             "Nombre" : "Luis",
+             "Asignatura" : "Acceso a Datos",
+             "Nota" : "2"
+            },
+            {
+             "Nombre" : "Jesús",
+             "Asignatura" : "Acceso a Datos",
+             "Nota" : "3"
+            },
+            {
+             "Nombre" : "Juan luis",
+             "Asignatura" : "Acceso a Datos",
+             "Nota" : "9"
+            },
+
+
+            {
+             "Nombre" : "Pablo Landskron",
+             "Asignatura" : "Acceso a Datos",
+             "Nota" : "10"
+            },
+            {
+             "Nombre" : "Alfredo",
+             "Asignatura" : "Acceso a Datos",
+             "Nota" : "2.5"
+            },
+            {
+             "Nombre" : "Marcos",
+             "Asignatura" : "Acceso a Datos",
+             "Nota" : "6"
+            },
+            {
+             "Nombre" : "Lucia",
+             "Asignatura" : "Acceso a Datos",
+             "Nota" : "7"
+            },
+
+
+            {
+             "Nombre" : "Ana",
+             "Asignatura" : "Acceso a Datos",
+             "Nota" : "8"
+            },
+            {
+             "Nombre" : "Alvaro",
+             "Asignatura" : "Acceso a Datos",
+             "Nota" : "5"
+            },
+            {
+             "Nombre" : "Daniel",
+             "Asignatura" : "Acceso a Datos",
+             "Nota" : "6"
+            },
+            {
+             "Nombre" : "Mónica",
+             "Asignatura" : "Acceso a Datos",
+             "Nota" : "7"
+            },
+
+        ];
+
+
+        function mostrar(texto)
+        {
+            console.log(texto);
+            for (const iterator of listado) {
+                console.log(iterator);
+            }
+        }
+
+        function media()
+        {
+            for(var i = 0 ; i < listado.length ; i++)
+            {
+
+                let nota = prompt("Introduce la nota del alumno : "+listado[i].Nombre+" Con la nota : "+listado[i].Nota+
+                "¿Quieres modificarla , en caso contrario pulsa ACEPTAR?");
+
+                if(nota.length < 1)
+                {
+                    nota = listado[i].Nota ; 
+                }
+
+                listado[i].Nota = nota ;
+
+            }
+
+        }
+
+        function calcularMedia()
+        {
+
+            let media = 0 ; 
+            for(var i = 0 ; i < listado.length ; i++)
+            {
+                
+                media = parseFloat(media) + parseFloat(listado[i].Nota) ; 
+                
+                console.log(listado[i].Nota);
+
+                let alumnos = listado.length;
+                
+
+                if(listado.length == i+1)
+                {
+                    console.log("La nota media de los alumnos es : "+media/listado.length);
+                }
+
+            }
+
+        }
+
+        function nuevoAlumno(texto)
+        {
+            let Nombre = prompt("Nombre del nuevo alumno , en caso de no querer introducir , pulsa ACEPTAR  ");
+
+
+            if(Nombre.length >= 2)
+            {
+
+                let Asignatura = "Acceso a Datos";
+                let Nota = prompt("Introduce la nota") ;
+
+                listado.push({"Nombre" : Nombre,
+                "Asignatura" : "Acceso a Datos",
+                "Nota" : Nota});
+            }
+
+        }
+
+
+        function BorrarAlumno(texto)
+        {
+
+            for(var i = 0 ; i < listado.length ; i++){
+            let Nombre = prompt("¿Quieres borrar a "+listado[i].Nombre+" , pulsa ACEPTAR  ");
+                 if(Nombre.length <= 1)
+                 {
+                    listado = listado.splice(1,listado.length-1);
+                   console.log("Contacto borrado : "+listado[i].Nombre);
+                 }
+            }
+
+
+            nuevoAlumno();
+            mostrar("Notas por defecto : ");
+            media();
+            mostrar("Notas modificadas : ");
+
+        }
+
+        BorrarAlumno("¿Quieres borrar a alguno de estos alumnos ?");
+        
+        
+        
+        
+       
+
+       
+
+       calcularMedia();
+    </script>
+</body>
+</html>

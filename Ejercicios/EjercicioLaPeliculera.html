@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cadenas</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <div id="texto"></div>
+    <p id ="nombreAnadir">Tu nombre : </p>
+    <p id ="nombreEdad">Tu edad : </p>
+    
+   
+    <script>    
+        // 1. Pide el nombre del cliente. 
+        // Si el nombre no es un tipo String o es nulo, debe producir un mensaje de error e insistir.
+        let nombreIntroducir = prompt("Introduce tu nombre :");
+        let edadIntroducir =  Number(prompt ("Indroduce tu edad"));
+        do {
+
+        
+
+        let nombre = document.getElementById("nombre");
+            
+          
+        document.getElementById("nombreAnadir").innerHTML += nombreIntroducir;
+        
+
+            alert("Introduce bien tu nombre . ");
+            nombreIntroducir = prompt("Introduce tu nombre :");
+
+            if((typeof(nombreIntroducir) == String) == true)
+            {
+                break; 
+            }
+
+        }while(nombreIntroducir == null || (typeof(nombreIntroducir) != String) == true); 
+            
+
+        document.getElementById("nombreEdad").innerHTML += edadIntroducir;
+
+        do {
+            
+            let edad = document.getElementById("edad");
+        
+            alert("Introduce bien tu edad . ");
+            edadIntroducir = prompt("Introduce tu edad :");
+
+            if((typeof(edadIntroducir) == Number) == true)
+            {
+                break;  
+            }
+
+        }while(edadIntroducir == null || (typeof(edadIntroducir) != Number) == true);
+
+/*
+        while(edadIntroducir == null || ( typeof(edadIntroducir) != Number) == true)
+        {
+            alert("Introduce bien tu edad . ");    
+            edadIntroducir =  Number(prompt ("Indroduce tu edad"));
+        }
+        
+        contador = contador + 1  ;
+            */
+       
+
+    </script>
+</body>
+</html>

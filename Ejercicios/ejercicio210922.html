@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+
+        // La precedencia de operadores permite leer de derecha a izquierda . 
+        let anno = 2022 ; 
+        let nuevoAnno = anno = 2023 ; 
+
+
+        var altura ; 
+
+        console.log(altura);        // Undefinded
+       // console.log(peso)           // Peso is not definded
+
+        let someResource ; 
+        console.log(someResource);  // UNDEFINDED . 
+        console.log(typeof someResource);  // UNDEFINED
+
+        someResource = null ; 
+        console.log(someResource);  // NULL
+        console.log(typeof someResource);   // Object
+
+
+        const STR1 = 42 +"1";
+        console.log(STR1);
+
+
+        // Función sin parámetros ()
+        function saludo ()
+        {
+            alert("Hola");
+        }
+
+
+        // Los paréntis () invocan a la función , si el resultado se guarda en una variable 
+        var resultado = resultado_saludo2 = saludo() ; 
+        alert(resultado_saludo2);
+
+
+        // Sin paréntesis se puede guardar todo el código de la función en una variable o mostrar . 
+        var resultado_saludo2 = saludo ; 
+        alert(resultado_saludo2);
+
+
+        // Función con parámetros 
+        function producto (a,b)
+        {
+            return a * b ; 
+        }
+
+        // Los paréntesis () invoca a la función 
+        alert(producto(5,6));
+
+        // Sin paréntesis se puede guardar la funcion en una variable o mostrar 
+        alert(producto);
+
+        // Función anónima 
+        var producto2 = function (a,b){return a * b ; };
+        var resultado2 = producto2(5,5);
+        alert(resultado2);
+
+        var jjFunction = new Function ("a","b","return a*b");
+        var resultado2 = jjFunction(5,7);
+        alert(resultado2);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

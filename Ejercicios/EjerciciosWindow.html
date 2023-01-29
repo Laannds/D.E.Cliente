@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Tabs</title>
+</head>
+<body>
+
+    <p id="id"></p>
+    <button onclick="abrirVentana()">ABRIR VENTANA</button>
+    <h1 id="reloj"></h1>
+
+    <p id="navegador"></p>
+    <script>
+        window.name = "Mi ventana" ;
+        let texto = "" ; 
+        texto += "<br/> Nombre : "+window.name ; 
+        texto+= "<br/> Alto externo : "+window.outerHeight ;
+        texto+= "<br/> Ancho externo : "+window.outerWidth ;
+        texto+= "<br/> Alto interno : "+window.innerHeight ; 
+        texto+= "<br/> Ancho interno : "+window.innerWidth; 
+        texto += "<br/> Distancia X : "+window.screenX ;
+        texto += "<br/> Distancia Y : "+window.screenY ; 
+        texto += "<br/> Ancho sin barra : "+screen.availWidth ;
+        texto += "<br/> Alto sin barra : "+screen.availHeight ;
+        texto += "<br/> Profundidad : "+screen.colorDepth ;
+        texto += "<br/> Resolucion : "+screen.pixelDepth ;
+
+        document.getElementById("id").innerHTML = texto ; 
+
+
+        let texto2 = "" ; 
+        texto2 += "<br/> CodeName : "+navigator.appCodeName ; 
+        texto2+= "<br/> Nombre : "+navigator.appName ;
+        texto2+= "<br/> Version : "+navigator.appVersion ;
+        texto2+= "<br/> Motor : "+navigator.product ; 
+        texto2+= "<br/> Plataforma : "+navigator.platform; 
+        texto2 += "<br/> Online : "+navigator.onLine ;
+        texto2 += "<br/> Idioma : "+navigator.language ; 
+        texto2 += "<br/> Cookies : "+navigator.cookieEnabled ; 
+        texto2 += "<br/> UserAgent : "+navigator.userAgent ; 
+
+ 
+        
+        
+        document.getElementById("navegador").innerHTML = texto2 ; 
+        alert("Java activado : "+navigator.javaEnabled());
+
+        let miVentana;
+            function crearVentana() {
+                miVentana=window.open("https://www.google.com");
+            }
+
+            function cerrarVentana() {
+               if(window.confirm("¿SEGURO ?"))
+               {
+                miVentana.close();
+               }
+            }
+
+            function redimensionarVnetana(){
+
+            }
+
+            function moverVentana() {
+                miVentana.moveBy(10,10);
+            }
+
+            function enfocar() {
+                miVentana.focus();
+            }
+
+            function imprimir() {
+                print();            //Ventana actual
+                miVentana.print();  //Imprime la otra ventana
+            }
+
+            function esperarSaludar()
+            {
+                window.alert("Buenos días");
+            }
+            function saludar() {
+                alert("Buenos dias")
+            }
+
+            setInterval(actualizarReloj,1000);
+
+            function actualizarReloj()
+            {
+                let fecha = new Date(); 
+                momentoActual(fecha);
+            
+
+            };
+
+            function momentoActual(fecha)
+            {
+                document.getElementById("reloj").innerHTML = fecha.getHours()+" : "+fecha.getMinutes()+" : "+fecha.getSeconds();
+
+            }
+
+
+        </script>
+
+        <button onclick="setTimeout(saludar,4000)">Saludar</button>
+        <button onclick="setInterval(saludar,2000)">Resaludar</button>
+
+
+        <button onclick ="moverVentana()">Mover ventana</button>
+        <button onclick ="enfocar()">Enfocar ventana</button>
+        <button onclick ="imprimir()">Imprimir ventana</button>
+        <button onclick ="crearVentana()">Crear ventana</button>
+        <button onclick ="cerrarVentana()">Cerrar ventana</button>
+        <br>
+
+    </script>
+</body>
+</html>

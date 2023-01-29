@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Página1</title>
+    <h1> Ejercicio 3: </h1>
+                        
+</head>
+
+<body>
+    <script>
+        
+        // APARTADO 1 : 
+        // FUNCIÓN SALUDAR (MOSTRANDO UNA VARIABLE LOCAL CON UN WINDOW.ALERT(VARIABLE)):
+        function saludar ()
+        {
+            // VARIABLE LOCAL SALUDO EN LA FUNCION SALUDAR : 
+            var saludo = "Hola";
+        
+            // VENTANA EMERGENTE CON LA VARIABLE LOCAL SALUDO . 
+            window.alert(saludo);
+            // PARA COMPROBAR VALORES DESDE DENTRO DE LA CONSOLE DEL PROPIO INSPECCIONAR DEL NAVEGADOR WEB 
+            console.log(saludo);
+        }
+        
+        // INTENTAMOS MOSTRAR LA VARIABLE LOCAL DE LA FUNCIÓN DESDE FUERA . 
+       // window.alert(saludo);
+        // LLAMADA A LA FUNCIÓN SALUDAR PARA QUE SE EJECUTE EN EL HTML .
+        saludar();
+        
+        
+        // APARTADO 2 : 
+        // VARIABLE GLOBAL FUERA DE LA FUNCIÓN (DESPEDIDA) 
+        var despedida = "Adiós";
+        
+        // FUNCIÓN DESPEDIR QUE TOMA EL VALOR DE LA VARIABLE DECLARADA FUERA DE DICHA FUNCIÓN :
+        function despedir()
+        {
+            window.alert(despedida);
+        }
+        
+        // LLAMADA A LA FUNCIÓN PARA QUE SE EJECUTE LA FUNCIÓN DESPEDIR . 
+        despedir();
+        // MOSTRAR LA VARIABLE DESDE FUERA DE LA FUNCIÓN . 
+        console.log(despedida);
+        
+        
+        // APARTADO 3 : 
+        // DEFINIR UNA VARIABLE GLOBAL , QUE VA A TENER EL MISMO NOMBRE QUE LA QUE VAMOS A DECLARAR EN LA FUNCIÓN ÁMBITO 
+        // PERO TENDRAN VALORES DISTINTOS  . 
+        
+        // DECLARACIÓN DE VARIABLE GLOBAL NOMBRE (PABLO):
+        var nombre = "Pablo";
+        
+        // DECLARACIÓN DE LA FUNCIÓN ÁMBITO QUE MOSTRARÁ CON UN WINDOW.ALERT LOS VALORES 
+        // DE DICHAS VARIABLES QUE HEMOS Y VAMOS A DECLARAR 
+        function ambito(nombre)
+        {
+            window.alert(nombre);
+        
+            // DECLARACIÓN DE VARIABLE LOCAL EN LA FUNCIÓN QUE SE SOBREESCRIBE EN EL ANTERIOR VALOR . 
+            var nombre = "Alex" ;
+            
+            window.alert(nombre);
+        }
+        
+        // PARA QUE FUNCIONE EL PASO DE LOS DATOS DE LA VARIABLE GLOBAL EN LA FUNCIÓN AMBITO , 
+        // DEBEMOS PASARLE COMO PARAMETRO LA VARIABLE O DIRECTAMENTE EL VALOR POR LO QUE SINO ,
+        // LA VARIABLE EN EL MOMENTO DE MOSTRARLA SERÍA UNDEFINED , LUEGO AL DECLARAR LA NUEVA VARIABLE ,  
+        // AUTOMATICAMENTE SE SOBREESCRIBE EL VALOR , Y MUESTRA EL NUEVO NOMBRE EN ESTE CASO ALEX . 
+        ambito(nombre);
+        
+        
+        // APARTADO 4 : 
+        
+        // DELCARACIÓN DE LA VARIABLE GLOBAL , QUE PASAREMOS A LA FUNCIÓN REMODELAR , A LA QUE LE AÑADIREMOS 
+        // MÁS CONTENIDO QUE MOSTRAREMOS CON UN WINDOW.ALERT
+        var variableGlobal = "Hoy es jueves" ;
+        
+        // DECLARACIÓN DE LA FUNCIÓN REMODELAR , QUE RECIBE LA VARIABLEGLOBAL :
+        function remodelar(variableGlobal)
+        {
+            // AÑADIMOS CONTENIDO A LA VARIABLE GLOBAL QUE TENIAMOS EN EL PRINCIPIO
+            variableGlobal += ", y mañana es viernes ( PABLO )";
+        
+            // MOSTRAMOS EL CONTENIDO DE LA VARIABLE .
+            window.alert(variableGlobal);
+        }
+        
+        // LLAMAMOS A LA FUNCIÓN REMODELAR QUE NOS RETORNA UN WONDOW.ALERT CON EL CONTENIDO ( VALOR )
+        // DE LA VARIABLEGLOBAL . 
+        remodelar(variableGlobal);
+        
+            </script>
+   
+</body>
+</html>

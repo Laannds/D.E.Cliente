@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Divisores de un numero </title>
+
+    <script>
+        let numero = Number(prompt ("Indroduce un numero"));
+        let div = numero ;
+        let numerosDivisores = " " ; 
+
+        while(div != 0)
+        {
+            if((numero % div) == 0) 
+            {
+                numerosDivisores = numerosDivisores +""+ div+"," ; 
+                window.alert(div);
+            }
+ 
+            div = div - 1 ; 
+        }
+
+        window.alert(numerosDivisores);
+    </script>
+
+
+</head>
+<body>
+    
+</body>
+</html>

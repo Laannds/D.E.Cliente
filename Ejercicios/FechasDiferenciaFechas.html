@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fecha</title>
+</head>
+<body>
+    <script>    
+
+        let ahora = Date.now();
+        let fechaFija = new Date(2022,09,01);
+        let antes = Date.parse(fechaFija);
+        console.log(ahora);
+        console.log(antes);
+
+        let tiempoTranscurrido = ahora - antes ; 
+        console.log(tiempoTranscurrido);
+
+
+        let misDias = tiempoTranscurrido / (24*60*60*1000);
+        console.log(misDias); 
+
+
+
+
+    </script>
+</body>
+</html>

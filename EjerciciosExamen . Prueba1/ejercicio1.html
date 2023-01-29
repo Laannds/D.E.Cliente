@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <script>
+       /* let numero = prompt(Number("INTRODUCE UN NUMERO ENTERO"));
+        function calcularNumero(numero)
+        {
+            if(numero % 2 == 0)
+            {
+                window.alert("El número"+numero+" , es par");
+            }
+            else
+            {
+                window.alert("El número es impar");
+            }
+
+        }
+        */
+
+
+       // let numero = (numero % 2) ? numero += alert("PAR") : numero += alert("IMPAR");
+
+       // let numero = (numero % 2) ? numero += alert("PAR") : numero += alert("IMPAR");
+
+       let numero = prompt("INTRODUCE UN NUMERO ENTERO");
+
+       let comprobar = ((numero) => numero % 2 == 0 ?  numero+= "PAR" : numero+= "IMPAR" ) ;
+
+       console.log(comprobar(numero));
+        </script>
+</body>
+</html>

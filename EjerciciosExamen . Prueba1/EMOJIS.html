@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=ç, initial-scale=1.0">
+    <title>Metodos Unicode</title>
+</head>
+<body>
+    <script>
+        const letter = "Manz";
+        console.log(letter[0]);
+        console.log(letter.codePointAt(0));
+        console.log(letter.codePointAt(0).toString(16));
+
+        console.log(letter.codePointAt(3));
+        console.log(letter.codePointAt(4));
+
+        console.log(String.fromCodePoint(65));//"A"
+        console.log(String.fromCodePoint(77));//"M"
+        console.log(String.fromCodePoint(0x004d));//"M"
+
+        let emoji1 = "\u{26a1}";
+        console.log(emoji1);
+        console.log(emoji1.length);
+        console.log(emoji1.split(""));
+
+        let emoji2 = "\u{1f697}";
+        console.log(emoji2);
+        console.log(emoji2.length);
+        console.log(emoji2.split(""));
+
+        let emoji3 = "\u{1f346}";
+        console.log(emoji3);
+        console.log(emoji3.length);
+        console.log(emoji3.split(""));
+
+        emojiFamilia = "👨‍👩‍👧‍👦";
+        console.log(emojiFamilia);
+        console.log(emojiFamilia.length);
+        const paste = "\u{200d}";
+        console.log(emojiFamilia.split(paste));
+        
+
+    </script>
+</body>
+</html>

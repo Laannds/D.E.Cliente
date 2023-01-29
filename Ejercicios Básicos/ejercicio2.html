@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedir dos numeros</title>
+</head>
+<body>
+    <script>
+        let numero1 = prompt("Introduce el primer número");
+        let numero2 = prompt("Introduce el segundo número");
+
+        if(isNaN(numero1)||numero1<0){
+            do{
+                numero1 = prompt("El valor introducido no es correcto, introduzca de nuevo el numero 1");
+            }while(isNaN(numero1))
+        }
+
+        if (isNaN(numero2)||numero2<0) {
+            do{
+                numero2 = prompt("El valor introducido no es correcto, introduzca de nuevo el numero 1");
+            }while(isNaN(numero2))
+        }
+
+        if(numero1 > numero2){
+            alert("El número1 es mayor que el número2");
+        }else{
+            if(numero2 > numero1){
+                alert("El número 2 es mayor que el número1");
+            }else{
+                alert("Los números introducidos son iguales");
+            }
+        }
+    </script>
+</body>
+</html>

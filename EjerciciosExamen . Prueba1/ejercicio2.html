@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <script>
+        let pasajeros = "68573528467604"; 
+        let array = Array.from(pasajeros).reverse();
+        let inicio = 0 ; 
+        let numero = 2 ; 
+        let pasajerosActuales = 0 ;
+
+        for(var i = 0 ; i < array.length/ 2 ; i++)
+        {
+            let auxiliar = array.slice(inicio,numero).reduce((inicio , numero) => inicio - numero );
+            console.log(auxiliar);
+
+            pasajerosActuales = pasajerosActuales + auxiliar ; 
+
+            console.log("LOS PASAJEROS ACTUALES SON "+pasajerosActuales);
+
+            inicio = inicio + 2 ; 
+            numero =  numero + 2 ; 
+        }
+
+
+    </script>
+</body>
+</html>

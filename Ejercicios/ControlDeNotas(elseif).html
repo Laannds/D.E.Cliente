@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Control de notas</title>
+    <script>
+        function nota(a){
+            
+            if(a >= 9 && a<=10)
+            {
+               return "Sobresaliente";
+            }
+
+            else if(a >= 7 && a<= 8)
+            {
+              return "Notable";
+            }
+
+            else if(a == 6)
+            {
+                 return "Bien";
+            }
+
+            else if(a == 5)
+            {
+                return "Suficiente";
+            }
+
+            else if(a < 5 && a>= 0){
+                return "Insuficiente";
+            }else
+            {
+                return "No valido ";
+            }
+        }
+    </script>
+</head>
+<body>
+    <script>
+        var nota = nota(12);
+        alert(nota);
+    </script>
+</body>
+</html>

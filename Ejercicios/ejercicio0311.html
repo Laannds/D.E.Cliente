@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio de clase</title>
+</head>
+<body>
+    <script>
+
+        let texto = "000111101000ABCH0" ; 
+
+        let patronesABuscar = ["00","101","ABC","H0"];
+
+        let i  ; 
+
+        let total = 0 ; 
+
+        for (i = 0  ; i < patronesABuscar.length ; i++)
+        {
+            let res = buscarPatron(texto , patronesABuscar[i]);
+            alert("El patron "+patronesABuscar[i]+"esta"+res+"veces");
+
+            total+= res ; 
+        }
+
+        alert("El total es : "+total);
+
+         function buscarPatron(texto,patron)
+         {
+             let i ; 
+             let encontrados = 0 ; 
+            
+             let textoMAY = texto.toUpperCase();
+             let patronMAY = patron.toUpperCase();
+            
+             for(i = 0 ; i < textoMAY.length ; i++)
+             {
+                 let cad = textoMAY.substring(i, i + patronMAY.length);
+                 
+                 if(cad === patronMAY)
+                 {
+                     encontrados++;
+                 }
+             }
+            
+            return encontrados ; 
+        }
+
+    
+
+    </script>
+</body>
+</html>

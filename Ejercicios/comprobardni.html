@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function pedirDni(pregunta){
+            let letras = ["T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E"];
+            let dni;
+            let valido = false;
+            while(valido == false){
+                dni = prompt(pregunta).toUpperCase();
+                let dniArr = [dni.slice(0,dni.length-1),dni.slice(dni.length-1,dni.length)];
+                //alert(dni.slice(0,dni.length-1)+"    "+dni.slice(dni.length-1,dni.length));
+                if(!isNaN(dniArr[0])&&isNaN(dniArr[1])){
+                    //alert("He cumplido la primera condición");
+                    if(letras[dniArr[0]%23]==dniArr[1]){
+                        valido = true;
+                        alert("Dni válido");
+                    }
+                }
+                if(valido == false){
+                    alert("Introduzca un formato de dni válido");
+                }
+            }
+        }
+        pedirDni("Dime tu dni");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
